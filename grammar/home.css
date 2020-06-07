@@ -1,0 +1,11 @@
+#title {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  color: var(--light-blue);
+  font-size: 250px;
+
+}
