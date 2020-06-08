@@ -26,7 +26,8 @@ html {
 
   /* ------ */
 
-  font: 14px "Helvetica", sans-serif;
+  font-size: 16px;
+  font-family : '游ゴシック';
   color: var(--font-color);
 
   background: var(--html-color);
@@ -69,6 +70,7 @@ nav:hover {  left: 0px; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 250px;
 
 }
 

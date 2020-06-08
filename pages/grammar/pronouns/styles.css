@@ -1,0 +1,35 @@
+main {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#first-person-both-table {
+
+  margin: 50px;
+  grid-template-columns: 0.25fr 0.5fr;
+
+  text-align: center;
+
+}
+
+#first-person-both-table > div:nth-child(2n), #first-person-male-and-female-table > div:nth-child(2n+1):not(:first-child) {
+
+  background: var(--yellow) !important;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+#first-person-male-and-female-table {
+
+  margin-top: 25px;
+  margin-bottom: 50px;
+  grid-template-columns: 0.15fr 0.3fr 0.15fr 0.3fr;
+
+  text-align: center;
+
+}

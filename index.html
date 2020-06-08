@@ -4,7 +4,7 @@
 
     <title>Japanese tips</title>
     <style type="text/css"></style>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
 
@@ -15,10 +15,11 @@
       <div id="nav-menu">
         <div id="nav-title">Japanese tips</div>
         <input id="search" type="text" placeholder="Search field...">
-        <a onclick="">Home</a>
-        <a onclick="">Nouns</a>
-        <a onclick="">Adjectives</a>
-        <a onclick="">Pronouns</a>
+        <a onclick="changePage('home')">Home</a> <!-- ホーム -->
+        <a onclick="changePage('grammar/nouns')">Nouns</a>
+        <a onclick="changePage('grammar/adjectives')">Adjectives</a>
+        <a onclick="changePage('grammar/verbs')">Verbs</a>
+        <a onclick="changePage('grammar/pronouns')">Pronouns</a>
       </div>
 
       <div id="nav-button">
@@ -28,8 +29,11 @@
     
     <main>
       <div id="filler"></div>
-      <iframe src="grammar/home.html" id="inner-page">Download normal browser</iframe>
+      <iframe src="" id="inner-page">Download normal browser</iframe>
     </main>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
 
   </body>
 </html>
