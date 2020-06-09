@@ -14,9 +14,19 @@ body {
   height: 100%;
 
   color: var(--light-blue);
-  font-size: 200px;
+  font-size: 40px;
 
   user-select: none;
 
 }
 
+@media ( min-width: 360px ) { #title { font-size: 50px; } }
+@media ( min-width: 375px ) { #title { font-size: 55px; } }
+@media ( min-width: 414px ) { #title { font-size: 60px; } }
+@media ( min-width: 700px ) { #title { font-size: 130px; } }
+@media ( min-width: 768px ) { #title { font-size: 150px; } }
+@media ( min-width: 1280px ) { #title { font-size: 200px; } }
+@media ( min-width: 1366px ) { #title { font-size: 200px; } }
+@media ( min-width: 1440px ) { #title { font-size: 200px; } }
+@media ( min-width: 1536px ) { #title { font-size: 250px; } }
+@media ( min-width: 1920px ) { #title { font-size: 300px; } }

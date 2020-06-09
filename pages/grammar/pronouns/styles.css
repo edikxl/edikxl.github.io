@@ -9,14 +9,21 @@ main {
 
 #first-person-both-table {
 
-  margin: 50px;
+  margin: 50px 0px;
   grid-template-columns: 0.25fr 0.5fr;
 
   text-align: center;
 
 }
 
-#first-person-both-table > div:nth-child(2n), #first-person-male-and-female-table > div:nth-child(2n+1):not(:first-child) {
+@media ( min-width: 360px ) { #first-person-both-table  { margin: 20px 0px; grid-template-columns: 0.15fr 0.8fr; } }
+@media ( min-width: 700px ) { #first-person-both-table  { margin: 20px 0px; grid-template-columns: 0.4fr 0.5fr; } }
+@media ( min-width: 1280px ) { #first-person-both-table  { margin: 50px 0px; grid-template-columns: 0.25fr 0.5fr; } }
+
+#first-person-both-table > div:nth-child(2n),
+#first-person-male-and-female-table > div:nth-child(2n+1):not(:first-child),
+#first-person-male-and-female-table-vertical > div:nth-child(2n):not(:nth-child(1)):not(:nth-child(n+6)),
+#first-person-male-and-female-table-vertical > div:nth-child(n+6):not(:nth-child(2n)) {
 
   background: var(--yellow) !important;
   font-size: 30px;
@@ -24,12 +31,51 @@ main {
 
 }
 
+@media ( min-width: 360px ) { #first-person-both-table > div:nth-child(2n),
+  #first-person-male-and-female-table-vertical > div:nth-child(2n):not(:nth-child(1)):not(:nth-child(n+6)),
+  #first-person-male-and-female-table-vertical > div:nth-child(n+6):not(:nth-child(2n)) { font-size: 25px; writing-mode: vertical-rl; } }
+@media ( min-width: 414px ) { #first-person-both-table > div:nth-child(2n),
+  #first-person-male-and-female-table-vertical > div:nth-child(2n):not(:nth-child(1)):not(:nth-child(n+6)),
+  #first-person-male-and-female-table-vertical > div:nth-child(n+6):not(:nth-child(2n)) { font-size: 30px; writing-mode: vertical-rl;} }
+@media ( min-width: 700px ) { #first-person-both-table > div:nth-child(2n),
+  #first-person-male-and-female-table-vertical > div:nth-child(2n):not(:nth-child(1)):not(:nth-child(n+6)),
+  #first-person-male-and-female-table-vertical > div:nth-child(n+6):not(:nth-child(2n)) { font-size: 30px; writing-mode: horizontal-tb;} }
+@media ( min-width: 1280px ) { #first-person-both-table > div:nth-child(2n),
+  #first-person-male-and-female-table > div:nth-child(2n+1):not(:first-child) { font-size: 30px; writing-mode: horizontal-tb;} }
+
 #first-person-male-and-female-table {
 
-  margin-top: 25px;
-  margin-bottom: 50px;
+  margin: 50px 0px;
   grid-template-columns: 0.15fr 0.3fr 0.15fr 0.3fr;
 
   text-align: center;
 
 }
+
+#first-person-male-and-female-table-vertical {
+
+  display: none;
+  margin: 50px 0px;
+  grid-template-columns: 0.15fr 0.8fr;
+
+  text-align: center;
+
+}
+
+@media ( min-width: 360px ) {
+
+  #first-person-male-and-female-table { display: none; }
+  #first-person-male-and-female-table-vertical { display: grid;  }
+
+}
+
+@media ( min-width: 1280px ) {
+
+  #first-person-male-and-female-table { display: grid; }
+  #first-person-male-and-female-table-vertical { display: none;  }
+
+}
+
+@media ( min-width: 360px ) { #first-person-male-and-female-table-vertical { margin: 20px 0px; grid-template-columns: 0.15fr 0.8fr; } }
+@media ( min-width: 700px ) { #first-person-male-and-female-table-vertical { margin: 20px 0px; grid-template-columns: 0.3fr 0.6fr;} }
+@media ( min-width: 1280px ) { #first-person-male-and-female-table { margin: 50px 0px; grid-template-columns: 0.15fr 0.3fr 0.15fr 0.3fr;} }
