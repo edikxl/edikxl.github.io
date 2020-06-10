@@ -1,53 +1,180 @@
 <!DOCTYPE html>
-<html>
+<html id="top">
   <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../../page.css">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../template.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <meta id="viewport" name="viewport" content="width=device-width" />
+    <script type="text/javascript">function goto(id){document.location.assign(id);}</script>
   </head>
   <body>
 
-    <main>
-    <div class="table green-table" id="first-person-both-table">
-      
-      <div class="yellow-cell bold big" style="grid-column: span 2">Both genders</div>
-      <div>私「わたくし」</div> <div><div>For <b>formal</b> situations</div></div>
-      <div>私「わたし」</div> <div><div>For <b>normal</b> polite situations</div></div>
-      <div>俺「おれ」</div> <div><div>A very <b>rough version</b> used almost exclusively by <b>males</b> in very casual situations</div></div>
-      <div>あっし</div> <div><div>In <b>the working class dialect</b> of Tokyo Bay you also hear <span lang="ja">あっし</span>, which ultimately comes from <span lang="ja">わたくし</span></div></div>
-      <div>うち</div><div><div>This is often used <b>by women in casual and polite settings</b>; however, there are many regions in Japan where this is a commonplace pronoun used <b>by both genders</b></div></div>
+    <div class="top-button" onclick="goto('#top')">上</div>
+
+    <div class="title">Pronouns</div>
+
+    <div class="table table-of-contains">
+
+      <div onclick="goto('#first-person')">1st person</div>
+      <div onclick="goto('#second-person')">2nd person</div>
+      <div onclick="goto('#third-person')">3rd person</div>
+      <div onclick="goto('#place-n-things')">Place & Things</div>
 
     </div>
 
-    <div class="table green-table" id="first-person-male-and-female-table">
+    <div class="title" id="first-person">1st person</div>
+
+    <div class="table two-column">
       
-      <div class="light-blue-cell bold big" style="grid-column: span 2">Male</div>
-      <div class="pink-cell bold big" style="grid-column: span 2">Female</div>
+      <div class="hl-en" style="grid-column: span 2">Both genders</div>
+      <div class="hl-ja">私「わたくし」</div> <div class="green"><div>For <b>formal</b> situations</div></div>
+      <div class="hl-ja">私「わたし」 </div> <div class="green"><div>For <b>normal</b> polite situations</div></div>
+      <div class="hl-ja">あっし     </div> <div class="green"><div>In <b>the working class dialect</b> of Tokyo Bay you also hear <span class="ja">あっし</span>, which ultimately comes from <span class="ja">わたくし</span></div></div>
+      <div class="hl-ja">お(い)ら</div> <div class="green"><div>Are slang, non-vulgar, <b>country-like variants</b></div></div>
+      <div style="grid-column: span 2"><div>For getting <b>plural</b> add <span class="ja">たち</span>. Ex. <span class="ja">私</span>→<span class="ja">私たち</span>, <span class="ja">僕</span>→<span class="ja">僕たち</span></div></div>
 
-      <div>僕「ぼく」</div> <div><div>From fairly <b>polite</b> to fairly <b>casual</b> situations</div></div>
-      <div>あた(く)し</div> <div><div>A very <b>feminine</b> and <b>casual</b> way to refer to oneself. Many girls have decided to opt for <span lang="ja">わたし</span>instead because <span lang="ja">あたし</span> <b>has a cutesy and girly sound</b></div></div>
+    </div>
+    
+    <div class="table two-column">
 
-      <div>儂「わし」</div> <div><div>This is casual and used by men over 50 and by old people in general in some regions. It is a contraction of <span lang="ja">わたし</span> and sometimes written in <span lang="ja">漢字</span> as <span lang="ja">儂</span></div></div>
-      <div>あたい</div> <div>This is found in rougher casual speech of female speakers</div>
+      <div class="hl-en light-blue" style="grid-column: span 2">Primarily Male</div>
+
+      <div class="hl-ja">僕「ぼく」</div> <div class="green"><div>From fairly <b>polite</b> to fairly <b>casual</b> situations. Is the general pronoun for guys of any age, but it is actually used by both genders in song. It may also be used to call for a boy child</div></div>
+
+      <div class="hl-ja">俺「おれ」</div> <div class="green"><div>A very <b>rough version</b> used almost exclusively <b>by males</b> in very casual situations. <span class="ja">俺</span> asserts masculinity and <span class="ja">俺様「おれさま」</span> is a very pompous variant</div></div>
+
+      <div class="hl-ja">儂「わし」</div> <div class="green"><div>This is casual and used <b>by men over 50</b> and <b>by old people in general in some regions</b>. It is a contraction of <span class="ja">わたし</span> and sometimes written in <span class="ja">漢字</span> as <span class="ja">儂</span></div></div>
 
     </div>
 
-    <div class="table green-table" id="first-person-male-and-female-table-vertical">
-      
-      <div class="light-blue-cell bold big m" style="grid-column: span 2">Male</div>
-      <div>僕「ぼく」</div> <div><div>From fairly <b>polite</b> to fairly <b>casual</b> situations</div></div>
-      <div>儂「わし」</div> <div><div>This is casual and used by men over 50 and by old people in general in some regions. It is a contraction of <span lang="ja">わたし</span> and sometimes written in <span lang="ja">漢字</span> as <span lang="ja">儂</span></div></div>
+    <div class="table two-column">
 
-      <div class="pink-cell bold big f" style="grid-column: span 2">Female</div>
-      <div>あた(く)し</div> <div><div>A very <b>feminine</b> and <b>casual</b> way to refer to oneself. Many girls have decided to opt for <span lang="ja">わたし</span>instead because <span lang="ja">あたし</span> <b>has a cutesy and girly sound</b></div></div>
-      <div>あたい</div> <div>This is found in rougher casual speech of female speakers</div>
+      <div class="hl-en pink" style="grid-column: span 2">Primarily Female</div>
 
+      <div class="hl-ja">あた(く)し</div> <div class="green"><div>A very <b>feminine</b> and <b>casual</b> way to refer to oneself. Many girls have decided to opt for <span class="ja">わたし</span>instead because <span class="ja">あたし</span> <b>has a cutesy and girly sound</b></div></div>
+
+      <div class="hl-ja">うち</div> <div class="green"><div>This is <b>often used by women in casual and polite settings</b>; however, there are many regions in Japan where <b>this is a commonplace</b> pronoun used <b>by both genders</b></div></div>
+
+      <div class="hl-ja">あたい</div> <div class="green"><div>This is found in <b>rougher casual speech</b> of female speakers</div></div>
 
     </div>
 
-    </main>
+    <div class="table two-column">
+
+      <div class="hl-en" style="grid-column: span 2">Old-fashioned</div>
+
+      <div class="hl-ja"><div>我輩<span class="nowrap">「わがはい」</span></div></div> <div class="green"><div>Quite <b>pompous</b></div></div>
+      <div class="hl-ja">我「われ」</div> <div class="green"><div>It is normally <b>used in set expressions</b>. The form <span class="ja">我が</span> is used <b>in formal situations to mean "our"</b>. Ex. "our country" is <span class="ja">我が国</span>.</div></div>
+      <div class="hl-ja">朕「ちん」</div> <div class="green"><div>Is equivalent to <b>the "royal we"</b> used by the Emperor</div></div>
+
+    </div>
+
+    <div class="title" id="second-person">2nd person</div>
+
+    <div class="table two-column">
+    
+      <div class="hl-en" style="grid-column: span 2">Common</div>
+    
+      <div class="hl-ja"><div>あなた</div></div> <div class="green"><div>The most <b>neutral</b>. Is also <b>an old-fashioned way for women to refer to their husband</b> or <b>lover</b></div></div>
+      <div class="hl-ja"><div>君「きみ」</div></div> <div class="green"><div>Is <b>a common casual "you"</b> and it <b>can be used towards subordinates and peers</b>. It is also <b>used by men to their lovers</b>. However, this last usage <b>may not be acceptable by some women</b>. It can be seen by some as belittling while by some as intimate. <b>From guy to guy</b>, it <b>may be seen as rude</b></div></div>
+
+      <div class="hl-ja"><div>お前<span class="nowrap">「お・まえ」</span></div></div>
+      <div class="green" style="grid-row: span 2"><div>Are often used in <b>vulgar situations by guys</b>. However, they <b>may</b> still <b>be seen used in</b> just <b>casual situations</b>. They are actually extremely <b>commonly used by men in close company</b> as a general word to use with no such stigma</div></div>
+      <div class="hl-ja">おめ</div>
+
+      <div style="grid-column: span 2"><div>The plural form of you is <span class="ja">あなたたち</span>. However, when you should be polite to an audience, use <span class="ja">みなさん</span>(everyone)</div></div>
+    
+    </div>
+
+    <div class="table two-column">
+    
+      <div class="hl-en" style="grid-column: span 2">Rude or old-fashioned</div>
+    
+      <div class="hl-ja"><div>あんた</div></div> <div class="green"><div>Is a <b>rude</b> variant <b>in Standard Japanese</b> when talking to someone, <b>but</b> it <b>can be seen in casual situations</b>. <b>There are</b> a lot of <b>dialects</b> in which <b>it is the standard second person pronoun</b></div></div>
+      <div class="hl-ja"><div>手前「て・めえ」</div></div> <div class="green"><div>Very <b>rude</b>. This is from <span class="ja">てまえ</span> but the non-contracted form is not used anymore in regular conversation. Like <span class="ja">「お前」</span>,<b> to add extra punch</b>, people will usually <b>say it like</b><span class="ja">「てめ～～」</span></div></div>
+      <div class="hl-ja"><div>貴様「き・さま」</div></div> <div class="green"><div>Very, very <b>rude</b>. Sounds like you want to take someone out</div></div>
+      <div class="hl-ja"><div>おのれ</div></div> <div class="green"><div><b>Originally a first person reflexive pronoun</b> meaning oneself, which it still means in set phrases</div></div>
+      <div class="hl-ja"><div>(お)ぬし</div></div> <div class="green"><div><b>Not</b> that <b>common</b></div></div>
+      <div class="hl-ja"><div>われ</div></div> <div class="green"><div><b>Most people don't use it</b> aside from actual delinquent speech, which was the basis for pop-culture usage such as in movies and manga</div></div>
+
+      <div style="grid-column: span 2"><div>It's important to note that <span class="ja">貴様</span> and <span class="ja">お前</span> used to be very honorific terms, and the former stayed slightly honorific up until the early Edo Period. <span class="ja">お主「おぬし」</span>also has honorific origin</div></div>
+    
+    </div>
+
+    <div class="title" id="third-person">3rd Person</div>
+
+    <div class="table two-column">
+    
+      <div class="hl-ja"><div>彼「かれ」</div></div>
+      <div class="green" style="grid-row: span 2"><div>You can use <span class="ja">「彼」</span> and <span class="ja">「彼女」</span> for <b>"he"</b> and <b>"she"</b> respectively. Notice that <span class="ja">「彼」</span> and <span class="ja">「彼女」</span> can also mean <b>"boyfriend"</b> and <b>"girlfriend"</b></div></div>
+      <div class="hl-ja"><div>彼女「かのじょ」</div></div>
+
+      <div class="hl-ja"><div>彼ら「かれら」</div></div> <div class="green"><div>May refer to a group of people <b>(they)</b> with both <b>men and women</b></div></div>
+      <div class="hl-ja"><div>彼女たち<span class="nowrap">「かのじょたち」</span></div></div> <div class="green"><div><b>Only</b> refers to groups of <b>women</b></div></div>
+
+      <div class="hl-ja"><div>あの人</div></div> <div class="green"><div> <b>Normal way</b> of saying <b>"That person"</b></div></div>
+      <div class="hl-ja"><div>あの方</div></div> <div class="green"><div> <b>Formal way</b> of saying <b>"That person"</b></div></div>
+      <div class="hl-ja"><div>あの男</div></div> <div class="green"><div> <b>That man</b></div></div>
+      <div class="hl-ja"><div>あの女</div></div> <div class="green"><div> <b>That women</b></div></div>
+
+      <div style="grid-column: span 2"><div>For "that woman" and "that man", add <span class="ja">の人</span> in formal contexts. Or, you may be inclined to say things like <span class="ja">あの男性(の方)</span>or<span class="ja">あの女性(の方)</span> for man and woman respectively</div></div>
+
+      <div style="grid-column: span 2"><div>The pronoun <b>"it" is omitted</b> because it is combined in Japanese with the concept of "that", which is also a pronoun</div></div>
+    
+    </div>
+
+    <div class="title" id="place-n-things">Place & Things</div>
+
+    <div class="six-equal-column table">
+    
+      <div class="hl-en" style="grid-column: span 6"><div>Physically visible</div></div>
+    
+      <div class="light-blue" style="grid-column: span 2"><div>Close to Speaker</div></div>
+      <div class="light-blue" style="grid-column: span 2"><div>Close to Listener</div></div>
+      <div class="light-blue" style="grid-column: span 2"><div>Far from Speaker and Listener</div></div>
+
+      <div class="green"><div>Here</div></div>
+      <div class="hl-ja"><div>ここ</div></div>
+      <div class="green"><div>There</div></div>
+      <div class="hl-ja"><div>そこ</div></div>
+      <div class="green"><div>Over There</div></div>
+      <div class="hl-ja"><div>あそこ</div></div>
+
+
+      <div class="green"><div>This</div></div>
+      <div class="hl-ja"><div>これ</div></div>
+      <div class="green"><div>That</div></div>
+      <div class="hl-ja"><div>それ</div></div>
+      <div class="green"><div>That over There</div></div>
+      <div class="hl-ja"><div>あれ</div></div>
+
+
+      <div style="grid-column: span 6"><div><span class="ja">それ</span> is the closest Japanese equivalent to <b>"it"</b></div></div>
+    
+    </div>
+
+    <div class="two-equal-column table">
+    
+      <div class="hl-en" style="grid-column: span 4"><div>Not physically visible</div></div>
+    
+      <div class="light-blue" style="grid-column: span 2"><div>Known only to Speaker</div></div>
+      <div class="light-blue" style="grid-column: span 2"><div>Known to both Speaker and Listener</div></div>
+
+      <div class="green"><div>There</div></div>
+      <div class="hl-ja"><div>そこ</div></div>
+
+      <div class="green"><div>Over There</div></div>
+      <div class="hl-ja"><div>あそこ</div></div>
+
+      <div class="green"><div>That</div></div>
+      <div class="hl-ja"><div>それ</div></div>
+
+      <div class="green"><div>That over There</div></div>
+      <div class="hl-ja"><div>あれ</div></div>
+    
+    </div>
 
   </body>
 </html>

@@ -1,0 +1,214 @@
+/* Media hints */
+
+/* < Extra small */
+@media ( min-width: 576px ) {} /* Small */
+@media ( min-width: 768px ) {} /* Medium */
+@media ( min-width: 992px ) {} /* Large */
+@media ( min-width: 1200px ) {} /* Extra large */
+
+/* Colors */
+html {
+
+  --black: #47494D;
+  --dark-blue: #29374D;
+
+  --yellow: #F7D83E;
+  --green: #CBF752;
+  --light-blue: #3BF7DE;
+  --pink: #ff575f;
+  
+  --yellow-low-opacity: #F7D83E50;
+  --green-low-opacity: #CBF75250;
+  --light-blue-low-opacity: #3BF7DE50;
+  --pink-low-opacity: #ff575f50;
+
+}
+
+/* Font sizes */
+
+html {
+
+  --normal: 16px; /* html */
+  --big: 20px; /* span.ja */
+  --bigger: 24px; /* .hl-en */
+  --huge: 28px; /* .title */
+  --biggest: 20px; /* .hl-ja */
+
+}
+
+@media ( min-width: 576px ) { html { --biggest: 20px; }}
+@media ( min-width: 768px ) { html { --biggest: 25px; }}
+@media ( min-width: 992px ) { html { --biggest: 30px; }}
+@media ( min-width: 1200px ) { html { --biggest: 30px; }}
+
+/* Text decorations */
+
+.bold { font-weight: bold; }
+
+span.ja {
+
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: var(--big);
+
+}
+
+span.nowrap {
+
+  white-space: nowrap;
+
+}
+
+span.ja-wrap {
+
+  font-weight: bold;
+  font-size: var(--big);
+
+}
+
+/* ------------------------ Blocks ------------------------ */
+
+html {
+
+  width: 100%;
+  height: 100%;
+
+  font-size: var(--normal);
+  font-family: '游ゴシック', sans-serif;
+  color: var(--black);
+
+  background: var(--black);
+
+  overflow-x: hidden;
+
+}
+
+body {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 3vw 0;
+
+}
+
+body > * {
+
+  padding: 3vw 0;
+
+}
+
+.top-button {
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+
+  font-weight: bold;
+
+  background: var(--light-blue-low-opacity);
+  color: var(--light-blue);
+
+  user-select: none;
+
+}
+
+.top-button:hover { background: var(--green-low-opacity); color: var(--green); }
+.top-button:active { background: var(--yellow-low-opacity); color: var(--yellow); }
+
+@media ( min-width: 1200px ) { .top-button { width: 55px; height: 55px; } } /* Extra large */
+
+.table-of-contains {
+
+  font-weight: bold;
+  user-select: none;
+
+}
+
+.table-of-contains { grid-template-columns: 0.75fr; } /* Extra small */
+@media ( min-width: 576px ) { .table-of-contains { grid-template-columns: 0.5fr; } } /* Small */
+@media ( min-width: 768px ) { .table-of-contains { grid-template-columns: 0.3fr; } } /* Medium */
+@media ( min-width: 1200px ) { .table-of-contains { grid-template-columns: 0.25fr; } } /* Extra large */
+
+.table-of-contains > div { background: var(--light-blue-low-opacity); color: var(--light-blue); }
+.table-of-contains > div:hover { background: var(--green-low-opacity); color: var(--green); }
+.table-of-contains > div:active { background: var(--yellow-low-opacity); color: var(--yellow); }
+
+.title {
+
+  width: 80%;
+  padding: 1vw;
+
+  text-align: center;
+  vertical-align: middle;
+  font-size: var(--huge);
+  font-weight: bold;
+
+  background: var(--light-blue);
+
+}
+
+.table {
+
+  display: grid;
+  grid-gap: 2vw;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.table > * {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  text-align: center;
+
+  background: var(--yellow);
+
+}
+
+.two-equal-column { grid-template-columns: repeat( 4, 0.1875fr ); }
+.six-equal-column { grid-template-columns: repeat( 6, 0.125fr ); }
+
+/* Predefined cells */
+
+.hl-en {
+
+  font-weight: bold;
+  font-size: var(--bigger);
+
+}
+
+.hl-ja {
+
+  font-weight: bold;
+  font-size: var(--biggest);
+
+  background: var(--light-blue-low-opacity);
+  color: var(--light-blue);
+
+}
+
+.yellow { background: var(--yellow) !important; }
+.green { background: var(--green) !important; }
+.light-blue { background: var(--light-blue) !important; }
+.pink { background: var(--pink) !important; }
+
+/*
+@media ( max-width: 768px ) { .hl-ja {
+
+  writing-mode: vertical-rl;
+
+}}*/

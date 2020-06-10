@@ -5,13 +5,18 @@ html {
 
   /* COLORS */
 
+  --black: #47494D;
   --dark-blue: #29374D;
-  --pink: #FC6656;
 
   --yellow: #F7D83E;
-  --light-blue: #3BF7DE;
-  --black: #47494D;
   --green: #CBF752;
+  --light-blue: #3BF7DE;
+  --pink: #ff575f;
+  
+  --yellow-low-opacity: #F7D83E50;
+  --green-low-opacity: #CBF75250;
+  --light-blue-low-opacity: #3BF7DE50;
+  --pink-low-opacity: #ff575f50;
 
   --html-color: var(--black);
 
@@ -171,6 +176,8 @@ main {
 
 }
 
+#inner-page { height: 100%; }
+
 @media ( orientation: portrait ) { main { flex-direction: column; } }
 
 #filler{
@@ -190,5 +197,3 @@ main {
   border: 0;
 
 }
-
-@media ( orientation: portrait ) { #inner-page { height: 100%; } }
