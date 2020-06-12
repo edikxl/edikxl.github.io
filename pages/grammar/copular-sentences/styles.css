@@ -1,0 +1,9 @@
+.fr15-30-30 {
+
+  grid-template-columns: 0.15fr 0.30fr 0.30fr;
+
+}
+
+.hl-ja { writing-mode: vertical-rl; }
+
+@media ( min-width: 1200px ) { .hl-ja { writing-mode: horizontal-tb; } }

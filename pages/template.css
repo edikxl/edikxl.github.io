@@ -179,7 +179,10 @@ body > * {
 
 }
 
-.two-equal-column { grid-template-columns: repeat( 4, 0.1875fr ); }
+/* Sum is ~0.75fr always */
+.two-equal-column { grid-template-columns: repeat( 2, 0.375fr ); }
+.three-equal-column { grid-template-columns: repeat( 3, 0.25fr ); }
+.four-equal-column { grid-template-columns: repeat( 4, 0.1875fr ); }
 .six-equal-column { grid-template-columns: repeat( 6, 0.125fr ); }
 
 /* Predefined cells */
@@ -205,6 +208,11 @@ body > * {
 .green { background: var(--green) !important; }
 .light-blue { background: var(--light-blue) !important; }
 .pink { background: var(--pink) !important; }
+
+.yellow-low-opacity { background: var(--yellow-low-opacity) !important; }
+.green-low-opacity { background: var(--green-low-opacity) !important; }
+.light-blue-low-opacity { background: var(--light-blue-low-opacity) !important; }
+.pink-low-opacity { background: var(--pink-low-opacity) !important; }
 
 /*
 @media ( max-width: 768px ) { .hl-ja {
