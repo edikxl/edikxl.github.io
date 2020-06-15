@@ -94,6 +94,15 @@ body {
 
 }
 
+div::selection,
+b::selection,
+span::selection {
+
+  color: inherit;
+  background: var(--pink);
+
+}
+
 body > * {
 
   padding: 3vw 0;
