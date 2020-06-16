@@ -1,0 +1,15 @@
+@media ( max-width: 576px ) { /* Small */
+
+  #structure-table .hl-en{ font-size: var(--smaller); }
+  #particle-pairs-table .hl-en { font-size: var(--big);  }
+
+}
+
+.span-me { grid-column: span 6; }
+
+@media ( max-width: 576px ) { /* Small */
+
+  .span-me { grid-column: span 4 !important; }
+  #other-info-table { grid-template-columns: repeat( 4, 0.1875fr ); }
+
+}

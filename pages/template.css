@@ -28,6 +28,8 @@ html {
 
 html {
 
+  --smaller: 12px;
+  --small: 14px;
   --normal: 16px; /* html */
   --big: 20px; /* span.ja */
   --bigger: 24px; /* .hl-en */
@@ -136,21 +138,21 @@ body > * {
 
 @media ( min-width: 1200px ) { .top-button { width: 55px; height: 55px; } } /* Extra large */
 
-.table-of-contains {
+#table-of-contains {
 
   font-weight: bold;
   user-select: none;
 
 }
 
-.table-of-contains { grid-template-columns: 0.75fr; } /* Extra small */
-@media ( min-width: 576px ) { .table-of-contains { grid-template-columns: 0.5fr; } } /* Small */
-@media ( min-width: 768px ) { .table-of-contains { grid-template-columns: 0.3fr; } } /* Medium */
-@media ( min-width: 1200px ) { .table-of-contains { grid-template-columns: 0.25fr; } } /* Extra large */
+#table-of-contains { grid-template-columns: 0.75fr; } /* Extra small */
+@media ( min-width: 576px ) { #table-of-contains { grid-template-columns: 0.5fr; } } /* Small */
+@media ( min-width: 768px ) { #table-of-contains { grid-template-columns: 0.3fr; } } /* Medium */
+@media ( min-width: 1200px ) { #table-of-contains { grid-template-columns: 0.25fr; } } /* Extra large */
 
-.table-of-contains > div { background: var(--light-blue-low-opacity); color: var(--light-blue); }
-.table-of-contains > div:hover { background: var(--green-low-opacity); color: var(--green); }
-.table-of-contains > div:active { background: var(--yellow-low-opacity); color: var(--yellow); }
+#table-of-contains > div { background: var(--light-blue-low-opacity); color: var(--light-blue); }
+#table-of-contains > div:hover { background: var(--green-low-opacity); color: var(--green); }
+#table-of-contains > div:active { background: var(--yellow-low-opacity); color: var(--yellow); }
 
 .title {
 
@@ -190,9 +192,28 @@ body > * {
 
 /* Sum is ~0.75fr always */
 .two-equal-column { grid-template-columns: repeat( 2, 0.375fr ); }
+.two-equal-column div.span-me { grid-column: span 2; }
+
 .three-equal-column { grid-template-columns: repeat( 3, 0.25fr ); }
+.three-equal-column div.span-me { grid-column: span 3; }
+
 .four-equal-column { grid-template-columns: repeat( 4, 0.1875fr ); }
+.four-equal-column div.span-me { grid-column: span 4; }
+
+.five-equal-column { grid-template-columns: repeat( 5, 0.15fr ); }
+.five-equal-column div.span-me { grid-column: span 5; }
+
 .six-equal-column { grid-template-columns: repeat( 6, 0.125fr ); }
+.six-equal-column div.span-me { grid-column: span 6; }
+
+.seven-equal-column { grid-template-columns: repeat( 7, 0.1071428571fr ); }
+.seven-equal-column div.span-me { grid-column: span 7; }
+
+.eight-equal-column { grid-template-columns: repeat( 8, 0.9375fr ); }
+.eight-equal-column div.span-me { grid-column: span 8; }
+
+.fifteen-equal-column { grid-template-columns: repeat( 15, 0.05fr ); }
+.fifteen-equal-column div.span-me { grid-column: span 15; }
 
 /* Predefined cells */
 
