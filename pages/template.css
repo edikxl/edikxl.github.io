@@ -45,28 +45,24 @@ html {
 
 /* Text decorations */
 
-.bold { font-weight: bold; }
-
-span.ja {
-
-  white-space: nowrap;
-  font-weight: bold;
-  font-size: var(--big);
-
-}
-
-span.nowrap {
-
-  white-space: nowrap;
-
-}
-
-span.ja-wrap {
+span.ja,
+span.ja-wrap,
+ruby {
 
   font-weight: bold;
   font-size: var(--big);
 
 }
+
+rtc.under { ruby-position: under; }
+
+span.ja,
+span.nowrap { white-space: nowrap; }
+
+span.pink { color: var(--pink); }
+span.pink::selection { color: var(--green); }
+
+span.yellow { color: var(--yellow);  }
 
 /* ------------------------ Blocks ------------------------ */
 
@@ -98,7 +94,10 @@ body {
 
 div::selection,
 b::selection,
-span::selection {
+span::selection,
+ruby::selection,
+rt::selection,
+rb::selection {
 
   color: inherit;
   background: var(--pink);
@@ -191,6 +190,9 @@ body > * {
 }
 
 /* Sum is ~0.75fr always */
+
+.one-column { grid-template-columns: 0.75fr; }
+
 .two-equal-column { grid-template-columns: repeat( 2, 0.375fr ); }
 .two-equal-column div.span-me { grid-column: span 2; }
 
@@ -217,14 +219,16 @@ body > * {
 
 /* Predefined cells */
 
-.hl-en {
+.hl-en,
+.hl-en ruby {
 
   font-weight: bold;
   font-size: var(--bigger);
 
 }
 
-.hl-ja {
+.hl-ja,
+.hl-ja ruby {
 
   font-weight: bold;
   font-size: var(--biggest);
@@ -234,15 +238,15 @@ body > * {
 
 }
 
-.yellow { background: var(--yellow) !important; }
-.green { background: var(--green) !important; }
-.light-blue { background: var(--light-blue) !important; }
-.pink { background: var(--pink) !important; }
+div.yellow { background: var(--yellow) !important; }
+div.green { background: var(--green) !important; }
+div.light-blue { background: var(--light-blue) !important; }
+div.pink { background: var(--pink) !important; }
 
-.yellow-low-opacity { background: var(--yellow-low-opacity) !important; }
-.green-low-opacity { background: var(--green-low-opacity) !important; }
-.light-blue-low-opacity { background: var(--light-blue-low-opacity) !important; }
-.pink-low-opacity { background: var(--pink-low-opacity) !important; }
+div.yellow-low-opacity { background: var(--yellow-low-opacity) !important; }
+div.green-low-opacity { background: var(--green-low-opacity) !important; }
+div.light-blue-low-opacity { background: var(--light-blue-low-opacity) !important; }
+div.pink-low-opacity { background: var(--pink-low-opacity) !important; }
 
 /*
 @media ( max-width: 768px ) { .hl-ja {

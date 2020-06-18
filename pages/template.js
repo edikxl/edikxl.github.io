@@ -12,7 +12,7 @@ $( document ).ready( () => {
 
     if( index != 0 ){ // Skiping first title ( main for the page )
 
-      $table_of_contains.append( $( '<div></div>' ).text( $( elem ).text() ).click( () => { goto( '#' + id ) } ) );
+      $table_of_contains.append( $( '<div></div>' ).html( $( elem ).html() ).click( () => { goto( '#' + id ) } ) );
 
     }
 

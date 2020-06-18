@@ -1,0 +1,5 @@
+@media ( max-width: 576px ) { /* Small */
+
+  #particle-pairs-table .hl-en { font-size: var(--big);  }
+
+}
