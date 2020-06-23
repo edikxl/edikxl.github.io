@@ -1,0 +1,7 @@
+@media ( max-width: 900px ) {
+
+  #ru-verbs .hl-ja:not(:first-child) { writing-mode: vertical-rl };
+  #suru-verbs .hl-ja:not(:first-child) { writing-mode: vertical-rl };
+
+}
+@media ( min-width: 950px ) { .small-screen-only { display: none; } }

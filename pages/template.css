@@ -59,10 +59,15 @@ rtc.under { ruby-position: under; }
 span.ja,
 span.nowrap { white-space: nowrap; }
 
-span.pink { color: var(--pink); }
-span.pink::selection { color: var(--green); }
+span.pink,
+ruby.yellow { color: var(--pink); }
+span.pink::selection,
+ruby.yellow::selection { color: var(--green); }
 
-span.yellow { color: var(--yellow);  }
+span.yellow,
+ruby.yellow { color: var(--yellow);  }
+
+.hl-ja ruby rt, .hl-ja ruby rtc { color: var(--yellow) }
 
 /* ------------------------ Blocks ------------------------ */
 
@@ -92,12 +97,7 @@ body {
 
 }
 
-div::selection,
-b::selection,
-span::selection,
-ruby::selection,
-rt::selection,
-rb::selection {
+body *::selection{
 
   color: inherit;
   background: var(--pink);
@@ -107,6 +107,29 @@ rb::selection {
 body > * {
 
   padding: 3vw 0;
+
+}
+
+a {
+
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1.5px 1.5px var(--light-blue);
+  user-select: none;
+  white-space: nowrap;
+
+}
+
+a:hover {
+
+  text-shadow: 1.5px 1.5px var(--pink-low-opacity);
+  cursor: pointer;
+
+}
+
+a:active {
+
+  text-shadow: 1.5px 1.5px var(--light-blue-low-opacity);
 
 }
 
@@ -194,28 +217,36 @@ body > * {
 .one-column { grid-template-columns: 0.75fr; }
 
 .two-equal-column { grid-template-columns: repeat( 2, 0.375fr ); }
-.two-equal-column div.span-me { grid-column: span 2; }
+.two-equal-column div.span-me,
+.two-column div.span-me { grid-column: span 2; }
 
 .three-equal-column { grid-template-columns: repeat( 3, 0.25fr ); }
-.three-equal-column div.span-me { grid-column: span 3; }
+.three-equal-column div.span-me,
+.three-column div.span-me { grid-column: span 3; }
 
 .four-equal-column { grid-template-columns: repeat( 4, 0.1875fr ); }
-.four-equal-column div.span-me { grid-column: span 4; }
+.four-equal-column div.span-me,
+.four-column div.span-me { grid-column: span 4; }
 
 .five-equal-column { grid-template-columns: repeat( 5, 0.15fr ); }
-.five-equal-column div.span-me { grid-column: span 5; }
+.five-equal-column div.span-me,
+.five-column div.span-me { grid-column: span 5; }
 
 .six-equal-column { grid-template-columns: repeat( 6, 0.125fr ); }
-.six-equal-column div.span-me { grid-column: span 6; }
+.six-equal-column div.span-me,
+.six-column div.span-me { grid-column: span 6; }
 
 .seven-equal-column { grid-template-columns: repeat( 7, 0.1071428571fr ); }
-.seven-equal-column div.span-me { grid-column: span 7; }
+.seven-equal-column div.span-me,
+.seven-column div.span-me { grid-column: span 7; }
 
 .eight-equal-column { grid-template-columns: repeat( 8, 0.9375fr ); }
-.eight-equal-column div.span-me { grid-column: span 8; }
+.eight-equal-column div.span-me,
+.eight-column div.span-me { grid-column: span 8; }
 
 .fifteen-equal-column { grid-template-columns: repeat( 15, 0.05fr ); }
-.fifteen-equal-column div.span-me { grid-column: span 15; }
+.fifteen-equal-column div.span-me,
+.fifteen-column div.span-me { grid-column: span 15; }
 
 /* Predefined cells */
 
@@ -237,6 +268,15 @@ body > * {
   color: var(--light-blue);
 
 }
+
+.hl-ja-like {
+
+  background: var(--light-blue-low-opacity);
+  color: var(--light-blue);
+
+}
+
+.hl-ja ruby { background: initial; }
 
 div.yellow { background: var(--yellow) !important; }
 div.green { background: var(--green) !important; }

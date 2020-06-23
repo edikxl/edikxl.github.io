@@ -1,3 +1,14 @@
+function changePage( path ){
+
+  try { window.parent.changePage( path ); } // On server
+  catch(err) { // On local
+
+    window.location = '../../' + path + '/index.html';
+
+  }
+
+}
+
 function goto(id){ document.location.assign(id); }
 
 $( document ).ready( () => {

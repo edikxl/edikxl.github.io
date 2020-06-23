@@ -65,7 +65,8 @@ function processNavButtonClicks(){
 
 window.onload = () => {
 
-  changePage( 'home' )
+  window.changePage = changePage;
+  changePage( 'home' );
   processNavButtonClicks();
 
 }
