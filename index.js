@@ -1,10 +1,42 @@
-function changePage( path ){
+window.onload = () => {
 
-  $( '#inner-page' ).attr( 'src', './pages/' + path + '/index.html' );
+  window.changePageTo = changePageTo;
+  
+  generateOnclickForNavButtons();
+  processNavButtonsClicks();
+  loadIframe();
 
 }
 
-function processNavButtonClicks(){
+function changePageTo( page, title = null ){
+  
+  var state = {};
+
+  if( !title ){
+
+    var $a = $( 'a[data-page=\"' + page + '\"]' );
+    title = $a.html();
+
+  }
+  
+  var url = '/' + page;
+
+  $( '#inner-page' ).attr( 'src', url );
+  history.pushState( state, title, url );
+
+}
+
+function generateOnclickForNavButtons(){
+
+  $('a').click( (e) => {
+
+    changePageTo( $(e.target).data('page'), $(e.target).html() );
+
+  } );
+
+}
+
+function processNavButtonsClicks(){
 
   $menu = $( '#nav-menu' );
   $nav = $( 'nav' );
@@ -63,10 +95,11 @@ function processNavButtonClicks(){
 
 }
 
-window.onload = () => {
+function loadIframe(){
 
-  window.changePage = changePage;
-  changePage( 'home' );
-  processNavButtonClicks();
+  const urlParams = new URLSearchParams( window.location.search );
+  const page = urlParams.get( 'page' );
+
+  changePageTo( page ? page : 'home' );
 
 }

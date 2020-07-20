@@ -1,15 +1,22 @@
-function changePage( path ){
+if( window.parent == window ){
 
-  try { window.parent.changePage( path ); } // On server
-  catch(err) { // On local
+  var url = new URL( window.location );
+  changePageTo( 'index.html?page=' + url.pathname.slice(1,-1) );
 
-    window.location = '../../' + path + '/index.html';
+}
+
+function changePageTo( path ){
+
+  try { window.parent.changePageTo( path ); } // On server ( If you change page from menu )
+  catch(err) { // On local ( If you use direct link to the page )
+
+    window.location = '../../' + path;
 
   }
 
 }
 
-function goto(id){ document.location.assign(id); }
+function goto( id ){ document.location.assign(id); }
 
 $( document ).ready( () => {
 
