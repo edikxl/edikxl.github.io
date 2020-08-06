@@ -1,28 +1,35 @@
 window.onload = () => {
 
-  window.changePageTo = changePageTo;
+  document.changePageTo = changePageTo;
+  document.getCurrentAnchor = getCurrentAnchor;
   
+  updateMenuOrientantionCorrectly();
   generateOnclickForNavButtons();
   processNavButtonsClicks();
   loadIframe();
 
 }
 
-function changePageTo( page, title = null ){
-  
-  var state = {};
+function updateMenuOrientantionCorrectly(){
 
-  if( !title ){
+  var $menu = $( '#nav-menu' );
+  var $nav = $( 'nav' );
 
-    var $a = $( 'a[data-page=\"' + page + '\"]' );
-    title = $a.html();
+  window.onresize = function(){
 
-  }
-  
-  var url = '/' + page;
+    if( window.matchMedia('( orientation: portrait )').matches ){
+      
+      $menu.css( 'display', 'none' );
+      $nav.css( 'height', 'auto' );
 
-  $( '#inner-page' ).attr( 'src', url );
-  history.pushState( state, title, url );
+    }else{
+
+      $menu.css( 'display', 'flex' );
+      $nav.css( 'height', '100%' );
+
+    }
+
+  };
 
 }
 
@@ -38,8 +45,8 @@ function generateOnclickForNavButtons(){
 
 function processNavButtonsClicks(){
 
-  $menu = $( '#nav-menu' );
-  $nav = $( 'nav' );
+  var $menu = $( '#nav-menu' );
+  var $nav = $( 'nav' );
 
   $( '#nav-button' ).click( (e) => {
 
@@ -98,8 +105,37 @@ function processNavButtonsClicks(){
 function loadIframe(){
 
   const urlParams = new URLSearchParams( window.location.search );
-  const page = urlParams.get( 'page' );
 
-  changePageTo( page ? page : 'home' );
+  const page = urlParams.get( 'page' );
+  const hash = urlParams.get( 'hash' );
+
+  const destination = page ? page : 'home';
+  changePageTo( destination, null, hash ? '#' + hash : null );
+
+}
+
+function changePageTo( page, title = null, anchor = null ){
+  
+  const state = {};
+
+  if( !title ){
+
+    var $a = $( 'a[data-page=\"' + page + '\"]' );
+    title = $a.html();
+
+  }
+
+  const url = '/' + page;
+
+  $( '#inner-page' ).attr( 'src', url );
+  history.pushState( state, title, url );
+
+  document.currentAnchor = anchor;
+
+}
+
+function getCurrentAnchor(){
+
+  return document.currentAnchor;
 
 }

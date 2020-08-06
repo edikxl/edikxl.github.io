@@ -47,7 +47,8 @@ html {
 
 span.ja,
 span.ja-wrap,
-ruby {
+ruby,
+ja-wrapper {
 
   font-weight: bold;
   font-size: var(--big);
@@ -60,12 +61,18 @@ span.ja,
 span.nowrap { white-space: nowrap; }
 
 span.pink,
-ruby.yellow { color: var(--pink); }
+ruby.pink,
+ja-word.pink,
+pink { color: var(--pink); }
+
 span.pink::selection,
-ruby.yellow::selection { color: var(--green); }
+ruby.yellow::selection,
+yellow::selection { color: var(--green); }
 
 span.yellow,
-ruby.yellow { color: var(--yellow);  }
+ruby.yellow,
+ja-word.yellow,
+yellow { color: var(--yellow); }
 
 .hl-ja ruby rt, .hl-ja ruby rtc { color: var(--yellow) }
 

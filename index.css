@@ -21,6 +21,8 @@ html {
   --html-color: var(--black);
 
   --nav-color: var(--light-blue);
+  --nav-scroll-bg-color: var(--light-blue);
+  --nav-scroll-scroller-color: var(--black);
   --nav-menu-a-hover-color: var(--green);
   --nav-menu-a-active-color: var(--yellow);
   --search-color: var(--yellow);
@@ -86,6 +88,8 @@ nav:hover {  left: 0px; }
   width: 250px;
   height: 100%;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--nav-scroll-bg-color) var(--nav-scroll-scroller-color);
 
 }
 
@@ -105,9 +109,16 @@ nav:hover {  left: 0px; }
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px; 
   
 }
 
+#nav-menu > a {
+
+  text-align: center;
+
+}
 #nav-menu > a:hover { background: var(--nav-menu-a-hover-color); }
 #nav-menu > a:active { background: var(--nav-menu-a-active-color); }
 
