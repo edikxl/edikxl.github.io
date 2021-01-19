@@ -125,7 +125,7 @@ function changePageTo( page, title = null, anchor = null ){
 
   }
 
-  const url = '/' + page;
+  const url = '/japanese-tips' + page;
 
   $( '#inner-page' ).attr( 'src', url );
   history.pushState( state, title, url );
