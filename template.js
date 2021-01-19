@@ -3,7 +3,7 @@ if( window.parent == window ){
   const url = new URL( window.location ).pathname.slice(1,-1);
   const hash = $(location).attr('hash').slice(1); // Removing # symbol, because it causes problems with URL params
 
-  const page = 'index.html?page=' + url + '&hash=' + hash;
+  const page = 'japanese-tips/index.html?page=' + url + '&hash=' + hash;
 
   changePageTo( page );
 
