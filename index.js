@@ -109,7 +109,7 @@ function loadIframe(){
   const page = urlParams.get( 'page' );
   const hash = urlParams.get( 'hash' );
 
-  const destination = page ? page : 'home';
+  const destination = page ? page : 'japanese-tips/home';
   changePageTo( destination, null, hash ? '#' + hash : null );
 
 }
@@ -125,8 +125,7 @@ function changePageTo( page, title = null, anchor = null ){
 
   }
 
-  let url = '/' + page;
-  url = document.location.hostname == 'localhost' ? url : 'japanese-tips' + url;
+  const url = '/' + page;
 
   $( '#inner-page' ).attr( 'src', url );
   history.pushState( state, title, url );
