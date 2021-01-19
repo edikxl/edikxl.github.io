@@ -126,7 +126,7 @@ function changePageTo( page, title = null, anchor = null ){
   }
 
   const url = '/' + page;
-  const innerURL = document.location.hostname == 'localhost' ? url : '/japanese-tips/' + url;
+  const innerURL = document.location.hostname == 'localhost' ? url : 'japanese-tips/' + url;
 
   $( '#inner-page' ).attr( 'src', innerURL );
   history.pushState( state, title, url );
